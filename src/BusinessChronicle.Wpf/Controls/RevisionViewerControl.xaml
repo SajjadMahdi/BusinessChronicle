@@ -1,0 +1,9 @@
+<UserControl x:Class="BusinessChronicle.Wpf.Controls.RevisionViewerControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <StackPanel Margin="8">
+        <TextBlock Text="{Binding Revision.Id.Value, RelativeSource={RelativeSource AncestorType=UserControl}}" FontWeight="Bold" />
+        <TextBlock Text="{Binding Revision.Type, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+        <TextBlock Text="{Binding Revision.CreatedAt, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,14 @@
+<UserControl x:Class="BusinessChronicle.Wpf.Controls.TimelineControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ListView ItemsSource="{Binding TimelineEntries, RelativeSource={RelativeSource AncestorType=UserControl}}">
+        <ListView.View>
+            <GridView>
+                <GridViewColumn Header="#" DisplayMemberBinding="{Binding Sequence}" Width="40" />
+                <GridViewColumn Header="Type" DisplayMemberBinding="{Binding Entry.RevisionType}" Width="80" />
+                <GridViewColumn Header="When" DisplayMemberBinding="{Binding Entry.OccurredAt}" Width="160" />
+                <GridViewColumn Header="Revision" DisplayMemberBinding="{Binding Entry.RevisionId.Value}" Width="200" />
+            </GridView>
+        </ListView.View>
+    </ListView>
+</UserControl>

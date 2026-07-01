@@ -1,0 +1,7 @@
+<UserControl x:Class="BusinessChronicle.Wpf.Controls.DiffViewerControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <DataGrid ItemsSource="{Binding Changes, RelativeSource={RelativeSource AncestorType=UserControl}}"
+              AutoGenerateColumns="True"
+              IsReadOnly="True" />
+</UserControl>

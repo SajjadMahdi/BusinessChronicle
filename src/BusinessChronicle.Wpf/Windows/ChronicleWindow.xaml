@@ -1,0 +1,18 @@
+<Window x:Class="BusinessChronicle.Wpf.Windows.ChronicleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:BusinessChronicle.Wpf.Controls"
+        Title="BusinessChronicle" Height="600" Width="900">
+    <Grid Margin="12">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <controls:TimelineControl TimelineEntries="{Binding TimelineEntries}" />
+        <StackPanel Grid.Column="1" Margin="12,0,0,0">
+            <controls:RevisionViewerControl Revision="{Binding SelectedRevision}" />
+            <controls:DiffViewerControl Changes="{Binding Changes}" Margin="0,12,0,0" />
+            <controls:CommentPanelControl Margin="0,12,0,0" />
+        </StackPanel>
+    </Grid>
+</Window>

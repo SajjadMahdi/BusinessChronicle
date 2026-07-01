@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+
+
+  <PropertyGroup>
+
+    <TargetFramework>net9.0-windows</TargetFramework>
+
+    <RootNamespace>BusinessChronicle.WinForms</RootNamespace>
+
+    <AssemblyName>BusinessChronicle.WinForms</AssemblyName>
+
+    <Description>WinForms controls for BusinessChronicle timelines, revisions, and diffs.</Description>
+
+    <PackageTags>audit;winforms;versioning;business-chronicle</PackageTags>
+
+    <UseWindowsForms>true</UseWindowsForms>
+    <IsAotCompatible>false</IsAotCompatible>
+    <EnableTrimAnalyzer>false</EnableTrimAnalyzer>
+  </PropertyGroup>
+
+
+
+  <ItemGroup>
+
+    <ProjectReference Include="..\BusinessChronicle\BusinessChronicle.csproj" />
+
+  </ItemGroup>
+
+
+
+</Project>
+
+
