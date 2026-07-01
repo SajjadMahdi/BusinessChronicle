@@ -12,6 +12,7 @@
     <Project Path="samples/BusinessChronicle.Samples.Mvc/BusinessChronicle.Samples.Mvc.csproj" />
     <Project Path="samples/BusinessChronicle.Samples.NativeAot/BusinessChronicle.Samples.NativeAot.csproj" />
     <Project Path="samples/BusinessChronicle.Samples.React/BusinessChronicle.Samples.React.csproj" />
+    <Project Path="samples/BusinessChronicle.Samples.Shared/BusinessChronicle.Samples.Shared.csproj" />
     <Project Path="samples/BusinessChronicle.Samples.WinForms/BusinessChronicle.Samples.WinForms.csproj" />
     <Project Path="samples/BusinessChronicle.Samples.Wpf/BusinessChronicle.Samples.Wpf.csproj" />
   </Folder>
