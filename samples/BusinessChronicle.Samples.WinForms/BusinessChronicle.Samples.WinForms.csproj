@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BusinessChronicle.Samples.WinForms</RootNamespace>
+    <UseWindowsForms>true</UseWindowsForms>
+    <IsPackable>false</IsPackable>
+    <EnableTrimAnalyzer>false</EnableTrimAnalyzer>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessChronicle.Samples.Shared\BusinessChronicle.Samples.Shared.csproj" />
+    <ProjectReference Include="..\..\src\BusinessChronicle\BusinessChronicle.csproj" />
+  </ItemGroup>
+
+</Project>
