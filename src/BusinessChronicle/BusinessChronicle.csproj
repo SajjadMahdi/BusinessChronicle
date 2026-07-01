@@ -12,4 +12,8 @@
     <ProjectReference Include="..\BusinessChronicle.EntityFrameworkCore\BusinessChronicle.EntityFrameworkCore.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+  </ItemGroup>
+
 </Project>

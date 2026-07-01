@@ -6,6 +6,9 @@ using BusinessChronicle.Abstractions.Models;
 using BusinessChronicle.Abstractions.Options;
 using BusinessChronicle.Abstractions.Results;
 using BusinessChronicle.Builders;
+using BusinessChronicle.Engine;
+using BusinessChronicle.Pipeline;
+using BusinessChronicle.Storage.InMemory;
 using BusinessChronicle.Validation;
 
 [assembly: TypeForwardedTo(typeof(Actor))]
@@ -72,6 +75,22 @@ using BusinessChronicle.Validation;
 [assembly: TypeForwardedTo(typeof(EntityReferenceBuilder))]
 [assembly: TypeForwardedTo(typeof(RevisionBuilder))]
 [assembly: TypeForwardedTo(typeof(SnapshotBuilder))]
+[assembly: TypeForwardedTo(typeof(ChronicleSession))]
+[assembly: TypeForwardedTo(typeof(ChronicleSessionFactory))]
+[assembly: TypeForwardedTo(typeof(DefaultChronicleClock))]
+[assembly: TypeForwardedTo(typeof(DefaultChronicleSerializer))]
+[assembly: TypeForwardedTo(typeof(DefaultMetadataProvider))]
+[assembly: TypeForwardedTo(typeof(NullActorResolver))]
+[assembly: TypeForwardedTo(typeof(RevisionFactory))]
+[assembly: TypeForwardedTo(typeof(ChronicleCommitPipeline))]
+[assembly: TypeForwardedTo(typeof(DefaultDiffEngine))]
+[assembly: TypeForwardedTo(typeof(RevisionComparer))]
+[assembly: TypeForwardedTo(typeof(InMemoryChronicleStore))]
+[assembly: TypeForwardedTo(typeof(RevisionReader))]
+[assembly: TypeForwardedTo(typeof(RevisionWriter))]
+[assembly: TypeForwardedTo(typeof(ChronicleQuery))]
+[assembly: TypeForwardedTo(typeof(VersionGraph))]
+[assembly: TypeForwardedTo(typeof(ICommitPipelineListener))]
 [assembly: TypeForwardedTo(typeof(ChronicleDomainValidator))]
 
 namespace BusinessChronicle;
