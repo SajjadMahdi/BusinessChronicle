@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <RootNamespace>BusinessChronicle.Samples.MinimalApi</RootNamespace>
+    <IsPackable>false</IsPackable>
+    <EnableTrimAnalyzer>false</EnableTrimAnalyzer>
+    <IsAotCompatible>false</IsAotCompatible>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\BusinessChronicle.AspNetCore\BusinessChronicle.AspNetCore.csproj" />
+    <ProjectReference Include="..\BusinessChronicle.Samples.Shared\BusinessChronicle.Samples.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

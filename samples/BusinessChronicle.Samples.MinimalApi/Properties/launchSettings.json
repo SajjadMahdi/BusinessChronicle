@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "BusinessChronicle.Samples.MinimalApi": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:9721;http://localhost:9722"
+    }
+  }
+}

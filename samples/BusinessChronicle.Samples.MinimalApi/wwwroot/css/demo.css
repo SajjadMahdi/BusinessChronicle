@@ -1,0 +1,208 @@
+:root {
+  --bg: #eef2f7;
+  --ink: #0f172a;
+  --muted: #64748b;
+  --primary: #1e4b7a;
+  --primary-dark: #163a60;
+  --teal: #0d9488;
+  --green: #15803d;
+  --card: #ffffff;
+  --line: #dbe3ee;
+  --shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "DM Sans", system-ui, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 10% 0%, #dbeafe 0, transparent 40%),
+    radial-gradient(circle at 90% 100%, #ccfbf1 0, transparent 35%),
+    var(--bg);
+  min-height: 100vh;
+}
+
+.page { max-width: 1100px; margin: 0 auto; padding: 2rem 1.25rem 3rem; }
+
+.hero { text-align: center; margin-bottom: 2rem; }
+
+.hero__badge {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid var(--line);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--teal);
+  margin-bottom: 1rem;
+  letter-spacing: 0.04em;
+}
+
+h1, h2 {
+  font-family: "IBM Plex Serif", Georgia, serif;
+  line-height: 1.15;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3rem); margin: 0 0 0.75rem; }
+
+.hero__lead {
+  max-width: 44rem;
+  margin: 0 auto 1.25rem;
+  font-size: 1.05rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.hero__links {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.link-card {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.55rem 1rem;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid var(--line);
+  font-size: 0.9rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 1.25rem;
+}
+
+@media (max-width: 860px) {
+  .layout { grid-template-columns: 1fr; }
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+.card__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--teal);
+  margin: 0 0 0.35rem;
+}
+
+.unit-card__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.muted { color: var(--muted); margin-top: 0; }
+
+.progress {
+  height: 10px;
+  background: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.progress__bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--primary), var(--teal));
+  border-radius: 999px;
+  transition: width 0.45s ease;
+}
+
+.progress__label { font-weight: 600; margin-bottom: 1.25rem; color: var(--muted); }
+
+.btn {
+  border: none;
+  border-radius: 10px;
+  padding: 0.9rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background: var(--primary);
+  color: #fff;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(30, 75, 122, 0.25);
+}
+
+.btn--primary:hover { background: var(--primary-dark); }
+.btn--primary:disabled { opacity: 0.55; cursor: not-allowed; }
+
+.success-note { color: var(--green); font-weight: 600; margin: 0; line-height: 1.5; }
+
+.timeline {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+
+.timeline__item {
+  position: relative;
+  padding: 0 0 1.25rem 2rem;
+  border-left: 2px solid var(--line);
+  margin-left: 0.5rem;
+}
+
+.timeline__item:last-child { border-left-color: transparent; padding-bottom: 0; }
+
+.timeline__item::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 0.25rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--teal);
+  box-shadow: 0 0 0 4px #fff;
+}
+
+.timeline__time {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 0.2rem;
+}
+
+.timeline__message {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.timeline__detail {
+  color: var(--muted);
+  margin-top: 0.15rem;
+  font-size: 0.92rem;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.footer p { max-width: 40rem; margin: 0 auto; }

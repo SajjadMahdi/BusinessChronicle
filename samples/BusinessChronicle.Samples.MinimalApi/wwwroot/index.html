@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chronicle ERP — Property Portfolio</title>
+  <link rel="stylesheet" href="/css/demo.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700&family=IBM+Plex+Serif:wght@600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero__badge">Commercial real estate · ERP demo</div>
+      <h1>Chronicle ERP</h1>
+      <p class="hero__lead">
+        Track a commercial property unit from vacancy to occupancy.
+        Every lease workflow step is recorded with full audit context — built for portfolio managers and compliance teams.
+      </p>
+      <nav class="hero__links">
+        <a class="link-card" href="/scalar" target="_blank">API reference (Scalar)</a>
+        <a class="link-card" href="/api/chronicle/entities/PropertyUnit/unit-4b-riverside/history" target="_blank">Audit history JSON</a>
+      </nav>
+    </header>
+
+    <main class="layout">
+      <section class="card unit-card" id="unit-panel">
+        <p class="card__eyebrow">Active unit record</p>
+        <div class="unit-card__status" id="status-badge">Loading…</div>
+        <h2 id="unit-title">—</h2>
+        <p class="muted" id="tenant-name">—</p>
+        <p class="muted" id="rent-label">—</p>
+
+        <div class="progress">
+          <div class="progress__bar" id="progress-bar"></div>
+        </div>
+        <p class="progress__label" id="progress-label">—</p>
+
+        <button class="btn btn--primary" id="advance-btn" type="button" hidden>
+          Next workflow step
+        </button>
+        <p class="success-note" id="complete-note" hidden>
+          Unit occupied. Complete lease lifecycle preserved in the audit trail.
+        </p>
+      </section>
+
+      <section class="card timeline-card">
+        <p class="card__eyebrow">Compliance audit trail</p>
+        <h2>Lease lifecycle history</h2>
+        <ol class="timeline" id="timeline"></ol>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Demo unit: Riverside Business Park — 4B. Click the action button to simulate ERP workflow steps.</p>
+    </footer>
+  </div>
+  <script src="/js/demo.js" type="module"></script>
+</body>
+</html>
