@@ -92,6 +92,13 @@ using BusinessChronicle.Validation;
 [assembly: TypeForwardedTo(typeof(VersionGraph))]
 [assembly: TypeForwardedTo(typeof(ICommitPipelineListener))]
 [assembly: TypeForwardedTo(typeof(ChronicleDomainValidator))]
+[assembly: TypeForwardedTo(typeof(BusinessChronicle.EntityFrameworkCore.Storage.EfChronicleStore))]
+[assembly: TypeForwardedTo(typeof(BusinessChronicle.EntityFrameworkCore.Interceptors.BusinessChronicleSaveChangesInterceptor))]
+[assembly: TypeForwardedTo(typeof(BusinessChronicle.EntityFrameworkCore.Configuration.BusinessChronicleEfOptions))]
+[assembly: TypeForwardedTo(typeof(BusinessChronicle.EntityFrameworkCore.Configuration.BusinessChronicleOptionsBuilder))]
+[assembly: TypeForwardedTo(typeof(BusinessChronicle.EntityFrameworkCore.Configuration.ChronicleTransactionBehavior))]
+[assembly: TypeForwardedTo(typeof(BusinessChronicle.EntityFrameworkCore.Configuration.EntityChronicleOptions))]
+[assembly: TypeForwardedTo(typeof(BusinessChronicle.EntityFrameworkCore.Configuration.SnapshotFrequency))]
 
 namespace BusinessChronicle;
 

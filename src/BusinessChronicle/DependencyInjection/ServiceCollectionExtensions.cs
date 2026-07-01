@@ -1,6 +1,8 @@
 using BusinessChronicle.Abstractions.Contracts;
 using BusinessChronicle.Abstractions.Options;
 using BusinessChronicle.Engine;
+using BusinessChronicle.EntityFrameworkCore.Configuration;
+using BusinessChronicle.EntityFrameworkCore.Providers;
 using BusinessChronicle.Storage.InMemory;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
@@ -36,6 +38,22 @@ public static class ServiceCollectionExtensions
         services.TryAddSingleton<IChronicleCommitPipeline, ChronicleCommitPipeline>();
         services.TryAddSingleton<ChronicleSessionFactory>();
 
+        return services;
+    }
+
+    /// <summary>
+    /// Adds BusinessChronicle with EF Core persistence and change capture.
+    /// </summary>
+    public static IServiceCollection AddBusinessChronicleEntityFrameworkCore(
+        this IServiceCollection services,
+        Action<ChronicleOptions>? configure = null,
+        Action<BusinessChronicleOptionsBuilder>? configureEf = null,
+        IBusinessChronicleDatabaseProvider? provider = null)
+    {
+        AddBusinessChronicle(services, configure);
+        services.RemoveAll<IChronicleStore>();
+        EntityFrameworkCore.DependencyInjection.EntityFrameworkCoreServiceCollectionExtensions
+            .AddBusinessChronicleEntityFrameworkCore(services, configureEf, provider);
         return services;
     }
 }
