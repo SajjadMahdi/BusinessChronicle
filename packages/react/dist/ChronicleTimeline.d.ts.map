@@ -1,0 +1,1 @@
+{"version":3,"file":"ChronicleTimeline.d.ts","sourceRoot":"","sources":["../src/ChronicleTimeline.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,sBAAsB,EAAE,eAAe,EAAE,MAAM,YAAY,CAAC;AAG1E,MAAM,WAAW,sBAAsB;IACrC,MAAM,EAAE,eAAe,CAAC;IACxB,aAAa,EAAE,sBAAsB,CAAC;CACvC;AAED,wBAAgB,iBAAiB,CAAC,EAAE,MAAM,EAAE,aAAa,EAAE,EAAE,sBAAsB,+BAyBlF"}
