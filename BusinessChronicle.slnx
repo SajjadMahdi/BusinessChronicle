@@ -1,1 +1,53 @@
-<Solution />
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/build/" />
+  <Folder Name="/docs/" />
+  <Folder Name="/samples/">
+    <Project Path="samples/BusinessChronicle.Samples.Blazor/BusinessChronicle.Samples.Blazor.csproj" />
+    <Project Path="samples/BusinessChronicle.Samples.MinimalApi/BusinessChronicle.Samples.MinimalApi.csproj" />
+    <Project Path="samples/BusinessChronicle.Samples.Mvc/BusinessChronicle.Samples.Mvc.csproj" />
+    <Project Path="samples/BusinessChronicle.Samples.NativeAot/BusinessChronicle.Samples.NativeAot.csproj" />
+    <Project Path="samples/BusinessChronicle.Samples.React/BusinessChronicle.Samples.React.csproj" />
+    <Project Path="samples/BusinessChronicle.Samples.WinForms/BusinessChronicle.Samples.WinForms.csproj" />
+    <Project Path="samples/BusinessChronicle.Samples.Wpf/BusinessChronicle.Samples.Wpf.csproj" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path=".gitattributes" />
+    <File Path=".gitignore" />
+    <File Path="CHANGELOG.md" />
+    <File Path="CODE_OF_CONDUCT.md" />
+    <File Path="CONTRIBUTING.md" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="global.json" />
+    <File Path="LICENSE" />
+    <File Path="README.md" />
+    <File Path="SECURITY.md" />
+    <File Path="SUPPORT.md" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/BusinessChronicle.Abstractions/BusinessChronicle.Abstractions.csproj" />
+    <Project Path="src/BusinessChronicle.AspNetCore/BusinessChronicle.AspNetCore.csproj" />
+    <Project Path="src/BusinessChronicle.Benchmarks/BusinessChronicle.Benchmarks.csproj" />
+    <Project Path="src/BusinessChronicle.Blazor/BusinessChronicle.Blazor.csproj" />
+    <Project Path="src/BusinessChronicle.Cli/BusinessChronicle.Cli.csproj" />
+    <Project Path="src/BusinessChronicle.Core/BusinessChronicle.Core.csproj" />
+    <Project Path="src/BusinessChronicle.EntityFrameworkCore.PostgreSql/BusinessChronicle.EntityFrameworkCore.PostgreSql.csproj" />
+    <Project Path="src/BusinessChronicle.EntityFrameworkCore.Sqlite/BusinessChronicle.EntityFrameworkCore.Sqlite.csproj" />
+    <Project Path="src/BusinessChronicle.EntityFrameworkCore.SqlServer/BusinessChronicle.EntityFrameworkCore.SqlServer.csproj" />
+    <Project Path="src/BusinessChronicle.EntityFrameworkCore/BusinessChronicle.EntityFrameworkCore.csproj" />
+    <Project Path="src/BusinessChronicle.React/BusinessChronicle.React.csproj" />
+    <Project Path="src/BusinessChronicle.Testing/BusinessChronicle.Testing.csproj" />
+    <Project Path="src/BusinessChronicle.WinForms/BusinessChronicle.WinForms.csproj" />
+    <Project Path="src/BusinessChronicle.Wpf/BusinessChronicle.Wpf.csproj" />
+    <Project Path="src/BusinessChronicle/BusinessChronicle.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/BusinessChronicle.Tests/BusinessChronicle.Tests.csproj" />
+  </Folder>
+</Solution>
