@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>BusinessChronicle</RootNamespace>
+    <AssemblyName>BusinessChronicle.Core</AssemblyName>
+    <Description>Core engine for BusinessChronicle — snapshot, diff, and chronicle orchestration.</Description>
+    <PackageTags>audit;versioning;timeline;history;changelog;business-chronicle</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessChronicle.Abstractions\BusinessChronicle.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>

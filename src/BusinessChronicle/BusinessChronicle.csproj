@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>BusinessChronicle</RootNamespace>
+    <AssemblyName>BusinessChronicle</AssemblyName>
+    <Description>Git-like audit, versioning, and timeline engine for modern .NET applications.</Description>
+    <PackageTags>audit;versioning;timeline;history;rollback;changelog;business-chronicle</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessChronicle.Core\BusinessChronicle.Core.csproj" />
+    <ProjectReference Include="..\BusinessChronicle.EntityFrameworkCore\BusinessChronicle.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>BusinessChronicle.Abstractions</RootNamespace>
+    <AssemblyName>BusinessChronicle.Abstractions</AssemblyName>
+    <Description>Core abstractions and contracts for BusinessChronicle — audit, versioning, and timeline primitives.</Description>
+    <PackageTags>audit;versioning;timeline;history;changelog;business-chronicle</PackageTags>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,88 @@
+using System.Runtime.CompilerServices;
+using BusinessChronicle.Abstractions.Contracts;
+using BusinessChronicle.Abstractions.Exceptions;
+using BusinessChronicle.Abstractions.Identifiers;
+using BusinessChronicle.Abstractions.Models;
+using BusinessChronicle.Abstractions.Options;
+using BusinessChronicle.Abstractions.Results;
+using BusinessChronicle.Builders;
+using BusinessChronicle.Validation;
+
+[assembly: TypeForwardedTo(typeof(Actor))]
+[assembly: TypeForwardedTo(typeof(ChangeDescriptor))]
+[assembly: TypeForwardedTo(typeof(ChronicleComment))]
+[assembly: TypeForwardedTo(typeof(ChronicleEntry))]
+[assembly: TypeForwardedTo(typeof(ChronicleMetadata))]
+[assembly: TypeForwardedTo(typeof(ChronicleTag))]
+[assembly: TypeForwardedTo(typeof(Commit))]
+[assembly: TypeForwardedTo(typeof(CommitMessage))]
+[assembly: TypeForwardedTo(typeof(ComparisonTarget))]
+[assembly: TypeForwardedTo(typeof(EntityReference))]
+[assembly: TypeForwardedTo(typeof(PropertyChange))]
+[assembly: TypeForwardedTo(typeof(Revision))]
+[assembly: TypeForwardedTo(typeof(RevisionReference))]
+[assembly: TypeForwardedTo(typeof(Snapshot))]
+[assembly: TypeForwardedTo(typeof(TimelineEntry))]
+[assembly: TypeForwardedTo(typeof(VersionPointer))]
+[assembly: TypeForwardedTo(typeof(CommitId))]
+[assembly: TypeForwardedTo(typeof(EntityId))]
+[assembly: TypeForwardedTo(typeof(RevisionId))]
+[assembly: TypeForwardedTo(typeof(ChronicleError))]
+[assembly: TypeForwardedTo(typeof(ChronicleResult))]
+[assembly: TypeForwardedTo(typeof(ChronicleResult<>))]
+[assembly: TypeForwardedTo(typeof(ChronicleResults))]
+[assembly: TypeForwardedTo(typeof(DomainValidationResult))]
+[assembly: TypeForwardedTo(typeof(RevisionComparisonResult))]
+[assembly: TypeForwardedTo(typeof(ChronicleOptions))]
+[assembly: TypeForwardedTo(typeof(ChronicleEntityOptions))]
+[assembly: TypeForwardedTo(typeof(SnapshotOptions))]
+[assembly: TypeForwardedTo(typeof(StorageOptions))]
+[assembly: TypeForwardedTo(typeof(MetadataOptions))]
+[assembly: TypeForwardedTo(typeof(RevisionListOptions))]
+[assembly: TypeForwardedTo(typeof(TimelineQueryOptions))]
+[assembly: TypeForwardedTo(typeof(IActorResolver))]
+[assembly: TypeForwardedTo(typeof(IChronicleClock))]
+[assembly: TypeForwardedTo(typeof(IChronicleCommitPipeline))]
+[assembly: TypeForwardedTo(typeof(IChronicleDiffEngine))]
+[assembly: TypeForwardedTo(typeof(IChronicleMetadataProvider))]
+[assembly: TypeForwardedTo(typeof(IChronicleQuery))]
+[assembly: TypeForwardedTo(typeof(IChronicleSerializer))]
+[assembly: TypeForwardedTo(typeof(IChronicleSession))]
+[assembly: TypeForwardedTo(typeof(IChronicleStore))]
+[assembly: TypeForwardedTo(typeof(ICommitContext))]
+[assembly: TypeForwardedTo(typeof(IRevisionComparer))]
+[assembly: TypeForwardedTo(typeof(IRevisionContext))]
+[assembly: TypeForwardedTo(typeof(IRevisionFactory))]
+[assembly: TypeForwardedTo(typeof(IRevisionReader))]
+[assembly: TypeForwardedTo(typeof(IRevisionWriter))]
+[assembly: TypeForwardedTo(typeof(IVersionGraph))]
+[assembly: TypeForwardedTo(typeof(ChronicleException))]
+[assembly: TypeForwardedTo(typeof(ConcurrencyException))]
+[assembly: TypeForwardedTo(typeof(ConfigurationException))]
+[assembly: TypeForwardedTo(typeof(RevisionNotFoundException))]
+[assembly: TypeForwardedTo(typeof(RollbackException))]
+[assembly: TypeForwardedTo(typeof(SnapshotException))]
+[assembly: TypeForwardedTo(typeof(StorageException))]
+[assembly: TypeForwardedTo(typeof(ValidationException))]
+[assembly: TypeForwardedTo(typeof(ActorBuilder))]
+[assembly: TypeForwardedTo(typeof(ChronicleEntryBuilder))]
+[assembly: TypeForwardedTo(typeof(CommitBuilder))]
+[assembly: TypeForwardedTo(typeof(CommitMessageBuilder))]
+[assembly: TypeForwardedTo(typeof(ComparisonTargetBuilder))]
+[assembly: TypeForwardedTo(typeof(EntityReferenceBuilder))]
+[assembly: TypeForwardedTo(typeof(RevisionBuilder))]
+[assembly: TypeForwardedTo(typeof(SnapshotBuilder))]
+[assembly: TypeForwardedTo(typeof(ChronicleDomainValidator))]
+
+namespace BusinessChronicle;
+
+/// <summary>
+/// Public entry point for the BusinessChronicle meta package.
+/// </summary>
+public static class Chronicle
+{
+    /// <summary>
+    /// Gets the canonical package identifier published to NuGet.
+    /// </summary>
+    public const string PackageName = "BusinessChronicle";
+}

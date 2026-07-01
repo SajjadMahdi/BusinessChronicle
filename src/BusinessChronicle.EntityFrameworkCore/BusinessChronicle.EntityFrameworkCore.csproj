@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>BusinessChronicle.EntityFrameworkCore</RootNamespace>
+    <AssemblyName>BusinessChronicle.EntityFrameworkCore</AssemblyName>
+    <Description>Entity Framework Core integration for BusinessChronicle persistence and change capture.</Description>
+    <PackageTags>audit;efcore;entity-framework;versioning;timeline;business-chronicle</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessChronicle.Core\BusinessChronicle.Core.csproj" />
+  </ItemGroup>
+
+</Project>
