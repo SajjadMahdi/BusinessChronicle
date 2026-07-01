@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>BusinessChronicle.EntityFrameworkCore.PostgreSql</RootNamespace>
+    <AssemblyName>BusinessChronicle.EntityFrameworkCore.PostgreSql</AssemblyName>
+    <Description>PostgreSQL provider optimizations for BusinessChronicle EF Core integration.</Description>
+    <PackageTags>audit;efcore;postgresql;versioning;business-chronicle</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessChronicle.EntityFrameworkCore\BusinessChronicle.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+
+</Project>
