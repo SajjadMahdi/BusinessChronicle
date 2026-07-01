@@ -1,0 +1,38 @@
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Chronicle ERP";
+}
+
+<section class="intro">
+    <p class="eyebrow">Commercial real estate · ERP demo</p>
+    <h1>Every lease decision, permanently auditable</h1>
+    <p class="lead">
+        Chronicle ERP tracks property units from vacancy to occupancy — who changed the lease status,
+        when, and why. Built for portfolio managers, finance teams, and compliance officers.
+    </p>
+    <a class="btn btn-primary" asp-controller="Properties" asp-action="Index">Open property portfolio</a>
+</section>
+
+<section class="steps">
+    <article class="step-card">
+        <span class="step-card__icon">🏢</span>
+        <h2>Portfolio register</h2>
+        <p>Each unit is a first-class entity with building, area, rent, and tenant context.</p>
+    </article>
+    <article class="step-card">
+        <span class="step-card__icon">📝</span>
+        <h2>Lease workflow</h2>
+        <p>Advance listings, offers, signed leases, and move-ins — every step writes an audit entry.</p>
+    </article>
+    <article class="step-card">
+        <span class="step-card__icon">🔍</span>
+        <h2>Compliance ready</h2>
+        <p>Inspect the full timeline before board reviews, handovers, or regulator requests.</p>
+    </article>
+</section>
+
+<section class="metrics">
+    <div class="metric"><strong>PropertyUnit</strong><span>Entity type</span></div>
+    <div class="metric"><strong>5 stages</strong><span>Vacant → Occupied</span></div>
+    <div class="metric"><strong>100%</strong><span>Change attribution</span></div>
+</section>

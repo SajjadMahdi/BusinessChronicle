@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "BusinessChronicle.Samples.Mvc": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "Properties",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:9732;http://localhost:9734"
+    }
+  }
+}

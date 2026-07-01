@@ -1,0 +1,60 @@
+@model BusinessChronicle.Samples.Shared.Models.PropertyUnit
+@using BusinessChronicle.Abstractions.Models
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = Model.DisplayTitle;
+    var timeline = (IReadOnlyList<TimelineEntry>)(ViewBag.Timeline ?? Array.Empty<TimelineEntry>());
+}
+
+<section class="detail-layout">
+    <article class="card">
+        <p class="eyebrow">Unit @Model.Id</p>
+        <div class="status-pill">@Model.StatusEmoji @Model.StatusLabel</div>
+        <h1>@Model.DisplayTitle</h1>
+        <p class="muted">Prospect tenant: <strong>@Model.ProspectTenant</strong></p>
+        <p class="muted">Rent: <strong>@Model.RentLabel</strong></p>
+        <p class="muted">Registered: @Model.RegisteredOn.ToLocalTime().ToString("f")</p>
+
+        <div class="progress"><div class="progress__bar" style="width:@Model.ProgressPercent%"></div></div>
+        <p class="progress__label">Lease pipeline @Model.ProgressPercent% complete</p>
+
+        @if (Model.CanAdvance && Model.NextActionLabel is not null)
+        {
+            <form asp-action="Advance" asp-route-id="@Model.Id" method="post" class="action-form">
+                @Html.AntiForgeryToken()
+                <button class="btn btn-primary" type="submit">@Model.NextActionLabel</button>
+            </form>
+        }
+        else
+        {
+            <p class="success-note">Unit occupied — full lease history preserved below.</p>
+        }
+    </article>
+
+    <article class="card">
+        <p class="eyebrow">Audit trail</p>
+        <h2>Lease lifecycle history</h2>
+        @if (timeline.Count == 0)
+        {
+            <p class="muted">No audit entries yet. Advance the workflow to record changes.</p>
+        }
+        else
+        {
+            <ol class="timeline">
+            @foreach (var item in timeline)
+            {
+                <li class="timeline__item">
+                    <time class="timeline__time">@item.Entry.OccurredAt.ToLocalTime().ToString("f")</time>
+                    <p class="timeline__message">@item.Entry.Message.Text</p>
+                    @if (!string.IsNullOrWhiteSpace(item.Entry.Message.ShortDescription))
+                    {
+                        <p class="timeline__detail">@item.Entry.Message.ShortDescription</p>
+                    }
+                </li>
+            }
+            </ol>
+        }
+    </article>
+</section>
+
+<p class="back-link"><a asp-action="Index">← Back to portfolio</a></p>

@@ -1,0 +1,25 @@
+@model IReadOnlyList<BusinessChronicle.Samples.Shared.Models.PropertyUnit>
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Property portfolio";
+}
+
+<section class="page-header">
+    <p class="eyebrow">Portfolio management</p>
+    <h1>Commercial property units</h1>
+    <p class="lead">Select a unit to review lease status, rent terms, and the full audit trail.</p>
+</section>
+
+<div class="order-grid">
+@foreach (var unit in Model)
+{
+    <a class="order-tile" asp-action="Details" asp-route-id="@unit.Id">
+        <div class="order-tile__status">@unit.StatusEmoji @unit.StatusLabel</div>
+        <h2>@unit.DisplayTitle</h2>
+        <p class="muted">Tenant prospect: @unit.ProspectTenant</p>
+        <p class="muted">Rent: @unit.RentLabel</p>
+        <div class="progress"><div class="progress__bar" style="width:@unit.ProgressPercent%"></div></div>
+        <span class="order-tile__cta">View unit record →</span>
+    </a>
+}
+</div>
