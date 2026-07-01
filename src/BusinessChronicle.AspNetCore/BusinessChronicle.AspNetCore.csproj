@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+
+
+  <PropertyGroup>
+
+    <RootNamespace>BusinessChronicle.AspNetCore</RootNamespace>
+
+    <AssemblyName>BusinessChronicle.AspNetCore</AssemblyName>
+
+    <Description>ASP.NET Core integration for BusinessChronicle with minimal APIs and OpenAPI.</Description>
+
+    <PackageTags>audit;aspnetcore;minimal-api;versioning;business-chronicle</PackageTags>
+
+    <IsAotCompatible>false</IsAotCompatible>
+
+    <EnableTrimAnalyzer>false</EnableTrimAnalyzer>
+
+  </PropertyGroup>
+
+
+
+  <ItemGroup>
+
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+
+  </ItemGroup>
+
+
+
+  <ItemGroup>
+
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" />
+
+    <PackageReference Include="Scalar.AspNetCore" />
+
+  </ItemGroup>
+
+
+
+  <ItemGroup>
+
+    <ProjectReference Include="..\BusinessChronicle\BusinessChronicle.csproj" />
+
+  </ItemGroup>
+
+
+
+</Project>
+
+

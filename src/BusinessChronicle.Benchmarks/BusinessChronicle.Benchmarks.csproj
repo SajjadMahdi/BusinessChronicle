@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+
+
+  <PropertyGroup>
+
+    <OutputType>Exe</OutputType>
+
+    <RootNamespace>BusinessChronicle.Benchmarks</RootNamespace>
+
+    <AssemblyName>BusinessChronicle.Benchmarks</AssemblyName>
+
+    <Description>BenchmarkDotNet suite for BusinessChronicle performance.</Description>
+
+    <IsPackable>false</IsPackable>
+
+    <EnableTrimAnalyzer>false</EnableTrimAnalyzer>
+
+    <IsAotCompatible>false</IsAotCompatible>
+
+  </PropertyGroup>
+
+
+
+  <ItemGroup>
+
+    <PackageReference Include="BenchmarkDotNet" />
+
+  </ItemGroup>
+
+
+
+  <ItemGroup>
+
+    <ProjectReference Include="..\BusinessChronicle\BusinessChronicle.csproj" />
+
+    <ProjectReference Include="..\BusinessChronicle.EntityFrameworkCore.Sqlite\BusinessChronicle.EntityFrameworkCore.Sqlite.csproj" />
+
+    <ProjectReference Include="..\BusinessChronicle.Testing\BusinessChronicle.Testing.csproj" />
+
+  </ItemGroup>
+
+
+
+</Project>
+
+

@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>BusinessChronicle.Cli</RootNamespace>
+    <AssemblyName>BusinessChronicle.Cli</AssemblyName>
+    <Description>Command-line interface for BusinessChronicle.</Description>
+    <PackageTags>audit;cli;versioning;business-chronicle</PackageTags>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>chronicle</ToolCommandName>
+    <PackageId>BusinessChronicle.Cli</PackageId>
+    <EnableTrimAnalyzer>false</EnableTrimAnalyzer>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.CommandLine" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessChronicle\BusinessChronicle.csproj" />
+    <ProjectReference Include="..\BusinessChronicle.Testing\BusinessChronicle.Testing.csproj" />
+  </ItemGroup>
+
+</Project>
