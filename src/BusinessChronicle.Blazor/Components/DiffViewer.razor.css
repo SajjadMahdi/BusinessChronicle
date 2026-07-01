@@ -1,0 +1,11 @@
+.bc-diff__table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.bc-diff__table th,
+.bc-diff__table td {
+    border: 1px solid #ddd;
+    padding: 0.35rem 0.5rem;
+    text-align: left;
+}

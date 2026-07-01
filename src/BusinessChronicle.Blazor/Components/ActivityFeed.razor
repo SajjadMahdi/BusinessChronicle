@@ -1,0 +1,15 @@
+@namespace BusinessChronicle.Blazor.Components
+
+<section class="bc-activity">
+    <h3>Activity</h3>
+    <ChronicleTimeline Entries="Timeline" />
+    <DiffViewer Changes="RecentChanges" />
+</section>
+
+@code {
+    [Parameter]
+    public IReadOnlyList<TimelineEntry> Timeline { get; set; } = Array.Empty<TimelineEntry>();
+
+    [Parameter]
+    public IReadOnlyList<ChangeDescriptor> RecentChanges { get; set; } = Array.Empty<ChangeDescriptor>();
+}

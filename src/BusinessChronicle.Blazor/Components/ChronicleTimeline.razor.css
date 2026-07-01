@@ -1,0 +1,24 @@
+.bc-timeline {
+    border: 1px solid var(--bc-border, #d0d7de);
+    border-radius: 8px;
+    padding: 1rem;
+    font-family: system-ui, sans-serif;
+}
+
+.bc-timeline__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.bc-timeline__item {
+    display: grid;
+    grid-template-columns: 3rem 6rem 12rem 1fr;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--bc-border, #eee);
+}
+
+.bc-timeline__empty {
+    color: #666;
+}

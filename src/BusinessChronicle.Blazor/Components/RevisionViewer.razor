@@ -1,0 +1,28 @@
+@namespace BusinessChronicle.Blazor.Components
+
+<article class="bc-revision">
+    @if (Revision is null)
+    {
+        <p class="bc-revision__empty">No revision selected.</p>
+    }
+    else
+    {
+        <header class="bc-revision__header">
+            <h3>@Revision.Id.Value</h3>
+            <span>@Revision.Type</span>
+        </header>
+        <dl class="bc-revision__meta">
+            <dt>Entity</dt>
+            <dd>@Revision.Entity.EntityType / @Revision.Entity.Id.Value</dd>
+            <dt>Version</dt>
+            <dd>@Revision.Version?.Number</dd>
+            <dt>Created</dt>
+            <dd>@Revision.CreatedAt.ToString("u")</dd>
+        </dl>
+    }
+</article>
+
+@code {
+    [Parameter]
+    public Revision? Revision { get; set; }
+}

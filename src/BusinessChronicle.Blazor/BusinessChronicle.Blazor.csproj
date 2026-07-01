@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <RootNamespace>BusinessChronicle.Blazor</RootNamespace>
+    <AssemblyName>BusinessChronicle.Blazor</AssemblyName>
+    <Description>Reusable Blazor components for BusinessChronicle timelines and diffs.</Description>
+    <PackageTags>audit;blazor;versioning;business-chronicle</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessChronicle\BusinessChronicle.csproj" />
+  </ItemGroup>
+
+</Project>
+

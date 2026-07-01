@@ -1,0 +1,28 @@
+@namespace BusinessChronicle.Blazor.Components
+
+<section class="bc-timeline">
+    <h3 class="bc-timeline__title">Timeline</h3>
+    @if (Entries.Count == 0)
+    {
+        <p class="bc-timeline__empty">No timeline entries.</p>
+    }
+    else
+    {
+        <ol class="bc-timeline__list">
+            @foreach (TimelineEntry entry in Entries)
+            {
+                <li class="bc-timeline__item">
+                    <span class="bc-timeline__sequence">@entry.Sequence</span>
+                    <span class="bc-timeline__type">@entry.Entry.RevisionType</span>
+                    <time class="bc-timeline__time">@entry.Entry.OccurredAt.ToString("u")</time>
+                    <span class="bc-timeline__revision">@entry.Entry.RevisionId.Value</span>
+                </li>
+            }
+        </ol>
+    }
+</section>
+
+@code {
+    [Parameter]
+    public IReadOnlyList<TimelineEntry> Entries { get; set; } = Array.Empty<TimelineEntry>();
+}

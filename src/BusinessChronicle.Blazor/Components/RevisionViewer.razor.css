@@ -1,0 +1,15 @@
+.bc-revision {
+    border: 1px solid var(--bc-border, #d0d7de);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.bc-revision__meta {
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    gap: 0.25rem 1rem;
+}
+
+.bc-revision__meta dt {
+    font-weight: 600;
+}

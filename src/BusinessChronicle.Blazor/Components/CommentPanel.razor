@@ -1,0 +1,20 @@
+@namespace BusinessChronicle.Blazor.Components
+
+<section class="bc-comments">
+    <h3>Comments</h3>
+    <ul>
+        @foreach (ChronicleComment comment in Comments)
+        {
+            <li>
+                <strong>@comment.Author.DisplayName</strong>
+                <span>@comment.CreatedAt.ToString("u")</span>
+                <p>@comment.Text</p>
+            </li>
+        }
+    </ul>
+</section>
+
+@code {
+    [Parameter]
+    public IReadOnlyList<ChronicleComment> Comments { get; set; } = Array.Empty<ChronicleComment>();
+}

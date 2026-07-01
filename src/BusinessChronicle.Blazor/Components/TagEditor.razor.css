@@ -1,0 +1,17 @@
+.bc-tags__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.bc-tags__chip {
+    background: #eef;
+    border-radius: 999px;
+    padding: 0.15rem 0.6rem;
+}
+
+.bc-tags__editor {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}

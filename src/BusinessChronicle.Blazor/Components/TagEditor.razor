@@ -1,0 +1,47 @@
+@namespace BusinessChronicle.Blazor.Components
+
+<section class="bc-tags">
+    <h3>Tags</h3>
+    <div class="bc-tags__list">
+        @foreach (ChronicleTag tag in Tags)
+        {
+            <span class="bc-tags__chip">@tag.Name=@tag.Value</span>
+        }
+    </div>
+    @if (Editable)
+    {
+        <div class="bc-tags__editor">
+            <input @bind="NewTagName" placeholder="Tag name" />
+            <input @bind="NewTagValue" placeholder="Tag value" />
+            <button type="button" @onclick="AddTag">Add</button>
+        </div>
+    }
+</section>
+
+@code {
+    [Parameter]
+    public IList<ChronicleTag> Tags { get; set; } = new List<ChronicleTag>();
+
+    [Parameter]
+    public bool Editable { get; set; }
+
+    [Parameter]
+    public EventCallback<ChronicleTag> TagAdded { get; set; }
+
+    private string NewTagName { get; set; } = string.Empty;
+    private string NewTagValue { get; set; } = string.Empty;
+
+    private async Task AddTag()
+    {
+        if (string.IsNullOrWhiteSpace(NewTagName))
+        {
+            return;
+        }
+
+        ChronicleTag tag = new(NewTagName, NewTagValue);
+        Tags.Add(tag);
+        await TagAdded.InvokeAsync(tag);
+        NewTagName = string.Empty;
+        NewTagValue = string.Empty;
+    }
+}

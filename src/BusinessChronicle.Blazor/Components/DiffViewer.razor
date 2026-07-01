@@ -1,0 +1,38 @@
+@namespace BusinessChronicle.Blazor.Components
+
+<section class="bc-diff">
+    <h3>Changes</h3>
+    @if (Changes.Count == 0)
+    {
+        <p>No differences.</p>
+    }
+    else
+    {
+        <table class="bc-diff__table">
+            <thead>
+                <tr>
+                    <th>Path</th>
+                    <th>Kind</th>
+                    <th>Old</th>
+                    <th>New</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (ChangeDescriptor change in Changes)
+                {
+                    <tr>
+                        <td>@change.Path</td>
+                        <td>@change.Kind</td>
+                        <td>@change.PropertyChange?.OldValue</td>
+                        <td>@change.PropertyChange?.NewValue</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</section>
+
+@code {
+    [Parameter]
+    public IReadOnlyList<ChangeDescriptor> Changes { get; set; } = Array.Empty<ChangeDescriptor>();
+}

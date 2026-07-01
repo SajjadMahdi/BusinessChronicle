@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>BusinessChronicle.React</RootNamespace>
+    <AssemblyName>BusinessChronicle.React</AssemblyName>
+    <Description>React bridge and OpenAPI client metadata for BusinessChronicle.</Description>
+    <PackageTags>audit;react;openapi;versioning;business-chronicle</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessChronicle.AspNetCore\BusinessChronicle.AspNetCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\packages\react\**\*" Pack="false" LinkBase="react-package" />
+  </ItemGroup>
+
+</Project>
+
